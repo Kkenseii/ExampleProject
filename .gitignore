@@ -68,3 +68,6 @@ vcpkg_installed/
 Testing/
 .cache/
 .vs/
+x64/
+x64/
+x64

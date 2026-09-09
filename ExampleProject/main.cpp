@@ -1,18 +1,27 @@
 #include <iostream>
+#include "Triangle.h"
 
-int main() {
+int main()
+{
+    double side, height;
 
-	float side, height, area;
+    std::cout << "Enter the side of triangle: ";
+    std::cin >> side;
 
-	std::cout << "Welcome to calculator of the area of a triangle!" << std::endl;
-	std::cout << "Enter the side: " << std::endl;
-	std::cin >> side;
-	std::cout << "Enter the height corresponding to the given side: " << std::endl;
-	std::cin >> height;
+    std::cout << "Enter the height of triangle: ";
+    std::cin >> height;
 
-	area = 0.5 * side * height;
+    try
+    {
+        Triangle triangle(side, height);
+        std::cout << "\nTriangle is made: " << triangle.toString() << std::endl;
+        std::cout << "The area: " << triangle.calculateArea() << std::endl;
+    }
+    catch (const std::invalid_argument& e)
+    {
+        std::cout << "Error to make triangle: " << e.what() << std::endl;
+        return 1;
+    }
 
-	std::cout << "The area of triangle is " << area;
-
-	return 0;
+    return 0;
 }
