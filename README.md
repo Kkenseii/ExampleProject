@@ -61,6 +61,9 @@ git commit -m "что было сделано?"
 
 # Выгрузка на GitHub:
 git push origin dev
+
+# Добавить файл в .gitignore:
+echo "имя файла" >> .gitignore
 ```
 
 # -Развёрнутый вариант шпаргалки 
