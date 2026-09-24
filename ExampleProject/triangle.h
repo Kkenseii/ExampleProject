@@ -19,7 +19,6 @@ public:
 
     void setSide(double newSide);
     void setHeight(double newHeight);
-    void setSideAndHeight(double newSide, double newHeight);
 
     Triangle& operator=(const Triangle& other);
     bool operator==(const Triangle& other) const;

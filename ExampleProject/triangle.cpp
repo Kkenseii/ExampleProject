@@ -45,17 +45,6 @@ void Triangle::setHeight(double newHeight) {
     _height = newHeight;
 }
 
-void Triangle::setSideAndHeight(double newSide, double newHeight) {
-    if (newSide <= 0) {
-        throw std::invalid_argument("Invalid argument: THE SIDE CANT BE LOWER THAN ZERO");
-    }
-    if (newHeight <= 0) {
-        throw std::invalid_argument("Invalid argument: THE HEIGHT CANT BE LOWER THAN ZERO");
-    }
-    _side = newSide;
-    _height = newHeight;
-}
-
 Triangle& Triangle::operator=(const Triangle& other) {
     if (this != &other)
     {

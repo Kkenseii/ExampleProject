@@ -56,15 +56,6 @@ TEST(TriangleTest, SetHeightValid)
     EXPECT_EQ(t.calculateArea(), 4.0);
 }
 
-TEST(TriangleTest, SetSideAndHeightValid)
-{
-    Triangle t;
-    t.setSideAndHeight(3.0, 4.0);
-    EXPECT_EQ(t.getSide(), 3.0);
-    EXPECT_EQ(t.getHeight(), 4.0);
-    EXPECT_EQ(t.calculateArea(), 6.0);
-}
-
 TEST(TriangleTest, CalculateAreaWithIntegers)
 {
     Triangle t(10.0, 5.0);
@@ -168,22 +159,3 @@ TEST(TriangleTest, SetHeightInvalidThrows)
     EXPECT_EQ(t.getHeight(), 1.0);
 }
 
-TEST(TriangleTest, SetSideAndHeightInvalidSideThrows)
-{
-    Triangle t;
-    EXPECT_THROW(t.setSideAndHeight(-1.0, 5.0), std::invalid_argument);
-    EXPECT_THROW(t.setSideAndHeight(0.0, 5.0), std::invalid_argument);
-
-    EXPECT_EQ(t.getSide(), 1.0);
-    EXPECT_EQ(t.getHeight(), 1.0);
-}
-
-TEST(TriangleTest, SetSideAndHeightInvalidHeightThrows)
-{
-    Triangle t;
-    EXPECT_THROW(t.setSideAndHeight(5.0, -1.0), std::invalid_argument);
-    EXPECT_THROW(t.setSideAndHeight(5.0, 0.0), std::invalid_argument);
-
-    EXPECT_EQ(t.getSide(), 1.0);
-    EXPECT_EQ(t.getHeight(), 1.0);
-}
