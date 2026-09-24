@@ -12,10 +12,10 @@ public:
     Triangle(const Triangle& other);
     ~Triangle();
 
-    double calculateArea() const;
+    double calculateArea() const noexcept;
 
-    double getSide() const;
-    double getHeight() const;
+    double getSide() const noexcept;
+    double getHeight() const noexcept;
 
     void setSide(double newSide);
     void setHeight(double newHeight);

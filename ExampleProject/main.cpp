@@ -15,7 +15,6 @@ int main()
     {
         Triangle triangle(side, height);
         std::cout << "\nTriangle is made: " << triangle.toString() << std::endl;
-        std::cout << "The area: " << triangle.calculateArea() << std::endl;
     }
     catch (const std::invalid_argument& e)
     {

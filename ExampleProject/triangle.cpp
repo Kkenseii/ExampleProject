@@ -19,15 +19,15 @@ Triangle::Triangle(const Triangle& other) {
 
 Triangle::~Triangle() {}
 
-double Triangle::calculateArea() const {
+double Triangle::calculateArea() const noexcept {
     return (_side * _height) / 2.0;
 }
 
-double Triangle::getSide() const{
+double Triangle::getSide() const noexcept {
     return _side;
 }
 
-double Triangle::getHeight() const {
+double Triangle::getHeight() const noexcept {
     return _height;
 }
 
